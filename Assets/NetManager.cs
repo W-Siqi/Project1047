@@ -33,14 +33,14 @@ public class NetManager : MonoBehaviourPunCallbacks
     public override void OnConnected()
     {
         base.OnConnected();
-        StatusBoard.Instance.connectStatus.text = "连接成功";
+        StatusBoard.Instance.connectStatus.text = "Connect Success";
         Debug.Log("链接成功"+ PhotonNetwork.IsMasterClient);
     }
 
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        StatusBoard.Instance.connectStatus.text = "已加入房间:" + PhotonNetwork.CurrentRoom.Name;
+        StatusBoard.Instance.connectStatus.text = "joined room" + PhotonNetwork.CurrentRoom.Name;
         Debug.Log("加入房间成功");
     }
 }
